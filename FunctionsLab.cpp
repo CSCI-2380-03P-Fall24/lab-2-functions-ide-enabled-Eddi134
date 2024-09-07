@@ -17,8 +17,6 @@ int locateSmallest(int myarray[], int start, int end){
 		if (myarray[start] < myarray[save]) {
 			save = start;
 			
-			
-			
 				}
 		else{
 			start++;
