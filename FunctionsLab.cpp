@@ -10,9 +10,22 @@ using namespace std; // making life easier so that we do not need to use std::ci
 // Note that I don't want the smallest value
 
 
-int locateSmallest(int array[], int start, int end){
-	return -1; // fix this!
+int locateSmallest(int myarray[], int start, int end){
+	int save = start;
+
+	while (start <= end) {
+		if (myarray[start] < myarray[save]) {
+			save = start;
+			
+				}
+		else{
+			start++;
+		}
+	}
+
+	return save; 
 }
+
 
 //Write the function called replaceVariable in the given interval such that 
 // output : you decide what is the output (here I put "void" - change this if you need to!)
@@ -20,7 +33,16 @@ int locateSmallest(int array[], int start, int end){
 //     an int which is the starting index of search,
 //     an int which is the ending point of searchspace
 // function: Search in the array from given start to end index and replace the given target value with 1000
-void replaceVariable() {
+void replaceVariable(int myarray[], int target, int start, int end) {
+	while (start <= end) {
+		if (myarray[start] == target) {
+
+			myarray[start] = 1000;
+			}
+		else {
+		start++;
+		}
+	}
 	return;
 }
 
@@ -29,7 +51,8 @@ void replaceVariable() {
 //write a function called printArray to print out the elements of the given array
 //output: nothing
 //input: the array of integers and its size
-void printArray() {
+void printArray(int myarray[], int number) {
+	cout << myarray[number] << endl;
 	return;
 }
 
@@ -48,6 +71,15 @@ void printArray() {
 //     n%m gives you the remainder after dividing n to m. for example 7%3 = 1 because 7 = 3*2 + 1, then 1 is the remainder.
 
 
-int sumOdds(int array[], int start, int end){
-	return -1;
+int sumOdds(int myarray[], int start, int end){
+
+	int sum = 0;
+	while (start <= end) {
+		if (myarray[start] % 2 != 0) {
+		sum = sum + myarray[start];
+		}
+		start++;
+	
+	}
+	return sum;
 }
