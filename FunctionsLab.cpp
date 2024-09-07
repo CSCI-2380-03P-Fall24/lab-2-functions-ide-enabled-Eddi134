@@ -71,16 +71,15 @@ void printArray(int myarray[], int number) {
 //     n%m gives you the remainder after dividing n to m. for example 7%3 = 1 because 7 = 3*2 + 1, then 1 is the remainder.
 
 
-int sumOdds(int array[], int start, int end){
+int sumOdds(int myarray[], int start, int end){
 
 	int sum = 0;
 	while (start <= end) {
-		if (array[start] % 2 != 0) {
-		sum = sum + array[start];
+		if (myarray[start] % 2 != 0) {
+		sum = sum + myarray[start];
 		}
-		else {
 		start++;
-	}
+	
 	}
 	return sum;
 }
